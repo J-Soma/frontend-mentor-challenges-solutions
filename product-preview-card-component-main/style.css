@@ -1,0 +1,103 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap';
+html {
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+p {
+  font-size: 14px;
+}
+
+.card {
+  background-color: hsl(0deg, 0%, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 50%;
+}
+@media screen and (min-width: 375px) {
+  .card {
+    border-radius: 10px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 1;
+  }
+}
+.card__image {
+  width: 100%;
+}
+@media screen and (min-width: 375px) {
+  .card__image {
+    border-radius: 10px 10px 0 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card__image {
+    border-radius: 10px 0 0 10px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+}
+.card__body {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+}
+@media screen and (min-width: 1440px) {
+  .card__body {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+}
+.card__header {
+  letter-spacing: 5px;
+}
+.card__title {
+  font-family: "Fraunces", serif;
+  color: hsl(212deg, 21%, 14%);
+  margin: 0;
+}
+.card__text--success {
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  color: hsl(158deg, 36%, 37%);
+  display: inline;
+}
+.card__text--disabled {
+  text-decoration: line-through;
+  display: inline;
+  margin-left: 10%;
+}
+.card__footer {
+  margin-top: 5%;
+  text-align: center;
+}
+.card__button-image {
+  margin-right: 10px;
+}
+.card__button--success {
+  margin-bottom: 10%;
+  background-color: hsl(158deg, 36%, 37%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 5%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

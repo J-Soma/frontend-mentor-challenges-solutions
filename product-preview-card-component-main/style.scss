@@ -1,0 +1,121 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap';
+
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
+$dark-blue: hsl(212, 21%, 14%);
+$dark-gray-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+$cream: hsl(30, 38%, 92%);
+$dark-cyan: hsl(158, 36%, 37%);
+
+$mobile: 375px;
+$desktop: 1440px;
+
+html {
+	background-color: $cream;
+}
+
+p {
+	font-size: 14px;
+}
+
+.card {
+	background-color: $white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	width: 50%;
+
+	@media screen and (min-width: $mobile) {
+		border-radius: 10px;
+		width: 90%;
+	}
+
+	@media screen and (min-width: $desktop) {
+		border-radius: 10px;
+		display: grid;
+		grid-template-columns: 6;
+		grid-template-rows: 1;
+	}
+
+	&__image {
+		width: 100%;
+
+		@media screen and (min-width: $mobile) {
+			border-radius: 10px 10px 0 0;
+		}
+
+		@media screen and (min-width: $desktop) {
+			border-radius: 10px 0 0 10px;
+			grid-column-start: 3;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+	}
+
+	&__body {
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		font-family: 'Montserrat', sans-serif;
+		color: $dark-gray-blue;
+
+		@media screen and (min-width: $desktop) {
+			grid-column-start: 4;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+	}
+
+	&__header {
+		letter-spacing: 5px;
+	}
+
+	&__title {
+		font-family: 'Fraunces', serif;
+		color: $dark-blue;
+		margin: 0;
+	}
+	
+	&__text {
+		&--success{
+			font-family: 'Fraunces', serif;
+			font-size: 24px;
+			color: $dark-cyan;
+			display: inline;
+		}
+		&--disabled{
+			text-decoration: line-through;
+			display: inline;
+			margin-left: 10%;
+		}
+	}
+	&__footer {
+		margin-top: 5%;
+		text-align: center;
+	}
+
+	&__button {
+		&-image {
+			margin-right: 10px;
+		}
+		&--success{
+			margin-bottom: 10%;
+			background-color: $dark-cyan;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			color: $white;
+
+			border: none;
+			border-radius: 10px;
+
+			padding: 5%;
+			width: 100%;
+		}
+	}
+}
